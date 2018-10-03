@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+#include <map>
+#include <string>
+#include <queue>
+#include <cstring>
+#include <list>
+#include <limits>
+#include <cstdlib>
+#include <algorithm>
+#include <utility>
+#define ll long long
+#define FOR(x,y)for(int x = 0 ; x<y ; x++)
+using namespace std;
+int main()
+{
+  long long i , j , num , test , t,ans;
+  cin >> test;
+  for(t = 1 ; t<=test ; t++)
+  {
+      ans = 1;
+      cin >> num;
+      if(num%2 == 0)
+      {
+          while(num%2 != 1)
+          {
+              num /=2;
+              ans *= 2;
+          }
+          printf("Case %lld: %lld %lld\n", t ,num ,ans );
+      }
+ 
+      else
+        printf("Case %lld: Impossible\n",t);
+  }
+}
